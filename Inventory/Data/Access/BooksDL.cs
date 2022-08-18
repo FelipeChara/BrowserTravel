@@ -1,6 +1,7 @@
 ﻿using Data.Interfaces;
 using Data.Model;
 using Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,15 @@ namespace Data.Access
                             Sinopsis = b.Sinopsis,
                             Paginas = b.NPaginas,
                             NombreEditorial = b.Editoriales.Nombre,
-                            SedeEditorial = b.Editoriales.Sede
+                            SedeEditorial = b.Editoriales.Sede,
+                            Autor = (from ab in _context.AutoresHasLibros
+                                     join a in _context.Autores on ab.AutoresId equals a.Id
+                                     where ab.LibrosIsbn == b.Isbn
+                                     select new AutorBookInfo()
+                                     {
+                                         NombreAutor = a.Nombre,
+                                         ApellidoAutor = a.Apellidos
+                                     }).ToList()                          
                         };
 
             return query.FirstOrDefault();

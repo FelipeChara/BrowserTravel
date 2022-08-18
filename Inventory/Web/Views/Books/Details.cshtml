@@ -1,0 +1,67 @@
+﻿@model Data.Models.BookInfo
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Detalle @Model.Titulo</h3>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <h5>Sinopsis</h5>
+                <h7>@Model.Sinopsis</h7>
+            </div>
+            <div class="form-group">
+                <h5>Numero Paginas</h5>
+                <h7>@Model.Paginas</h7>
+            </div>
+            <div class="form-group">
+                <h5>Editorial</h5>
+                <h7>@Model.NombreEditorial</h7>
+            </div>
+            <div class="form-group">
+                <h5>Sede Editorial</h5>
+                <h7>@Model.SedeEditorial</h7>
+            </div>
+            <div class="form-group">
+                @if (Model.Autor.Count() > 0)
+                {
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5>Autores</h5>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <td class="col-4" align="center">Nombre</td>
+                                <td class="col-4" align="center">Apellidos</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Autor)
+                            {
+                                <tr>
+                                    <td class="col-4">@item.NombreAutor</td>
+                                    <td class="col-4">@item.ApellidoAutor</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        
+    </div>
+</div>

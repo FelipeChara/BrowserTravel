@@ -16,12 +16,17 @@ namespace Data.Models
 
         public string Paginas { get; set; }
 
-        public string NombreAutor { get; set; }
-
-        public string ApellidoAutor { get; set; }
+        public List<AutorBookInfo> Autor { get; set; }
 
         public string NombreEditorial { get; set; }
 
         public string SedeEditorial { get; set; }
+    }
+
+    public class AutorBookInfo
+    {
+        public string NombreAutor { get; set; }
+
+        public string ApellidoAutor { get; set; }
     }
 }

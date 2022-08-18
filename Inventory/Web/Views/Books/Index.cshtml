@@ -1,8 +1,45 @@
 ﻿
+@model List<Data.Models.BookInfo>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Lista de Libros</h3>
+        </div>
+    </div>
 
+    <div class="row">
+        @if (Model.Count() > 0)
+        {
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td class="col-3" align="center">Titulo</td>
+                        <td class="col-5" align="center">Sinopsis</td>
+                        <td class="col-2" align="center">Numero de Pagina</td>
+                        <td class="col-2" align="center">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="col-3">@item.Titulo</td>
+                            <td class="col-5">@item.Sinopsis</td>
+                            <td class="col-2">@item.Paginas</td>
+                            <td class="col-2" align="center">
+                                <a asp-controller="Books" asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalles</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+
+</div>
