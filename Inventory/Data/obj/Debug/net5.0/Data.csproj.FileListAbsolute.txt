@@ -1,0 +1,15 @@
+D:\Respositorios\BrowserTravel\Inventory\Data\bin\Debug\net5.0\Data.deps.json
+D:\Respositorios\BrowserTravel\Inventory\Data\bin\Debug\net5.0\Data.runtimeconfig.json
+D:\Respositorios\BrowserTravel\Inventory\Data\bin\Debug\net5.0\Data.runtimeconfig.dev.json
+D:\Respositorios\BrowserTravel\Inventory\Data\bin\Debug\net5.0\Data.dll
+D:\Respositorios\BrowserTravel\Inventory\Data\bin\Debug\net5.0\Data.pdb
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.csproj.AssemblyReference.cache
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.AssemblyInfoInputs.cache
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.AssemblyInfo.cs
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.csproj.CoreCompileInputs.cache
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.dll
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\refint\Data.dll
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.pdb
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\Data.genruntimeconfig.cache
+D:\Respositorios\BrowserTravel\Inventory\Data\obj\Debug\net5.0\ref\Data.dll
