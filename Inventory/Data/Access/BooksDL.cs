@@ -1,5 +1,5 @@
 ﻿using Data.Interfaces;
-using Data.Model;
+using Data.BD;
 using Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -20,6 +20,10 @@ namespace Data.Access
             _context = context;
         }
 
+        /// <summary>
+        /// Obtener detalles del libreo
+        /// </summary>
+        /// <returns></returns>
         public BookInfo GetById(int id)
         {
             var query = from b in _context.Libros
@@ -45,6 +49,10 @@ namespace Data.Access
             return query.FirstOrDefault();
         }
 
+        /// <summary>
+        /// Lista todos los libros disponibles
+        /// </summary>
+        /// <returns></returns>
         public List<BookInfo> List()
         {
             var query = from b in _context.Libros

@@ -23,6 +23,12 @@ namespace Web.Controllers
         public IActionResult Details(int id)
         {
             BookInfo bookInfo = _booksModule.GetById(id);
+
+            if (bookInfo == null)
+            {
+                return NoContent();
+            }
+
             return View(bookInfo);
         }
     }
